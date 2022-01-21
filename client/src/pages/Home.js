@@ -5,6 +5,7 @@ import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
+import Card from '../components/Card';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);

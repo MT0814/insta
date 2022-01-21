@@ -48,7 +48,7 @@ function App() {
           <Header />
           <div className="container">
             <Route exact path="/">
-              <Home />
+              {localStorage.getItem('id_token') ? <Home /> : <Login />}
             </Route>
             <Route exact path="/login">
               <Login />
@@ -57,15 +57,17 @@ function App() {
               <Signup />
             </Route>
             <Route exact path="/me">
-              <Profile />
+              {localStorage.getItem('id_token') ? <Profile /> : <Login />}
             </Route>
             <Route exact path="/profiles/:username">
-              <Profile />
+              {localStorage.getItem('id_token') ? <Profile /> : <Login />}
             </Route>
             <Route exact path="/thoughts/:thoughtId">
-              <SingleThought />
+              {localStorage.getItem('id_token') ? <SingleThought /> : <Login />}
             </Route>
+
           </div>
+
           <Footer />
         </div>
       </Router>

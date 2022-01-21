@@ -94,7 +94,64 @@ const Signup = () => {
         </div>
       </div>
     </main>
+
   );
+
+
+
+
+
 };
 
 export default Signup;
+
+
+
+
+
+{/* <div>
+      {data ? (
+        <p>Success! You may now head{' '}
+          <Link to="/">back to the homepage.</Link>
+        </p >
+      ) : (
+        <form className ="ui form" onSubmit={handleFormSubmit}>
+          <h4 className ="ui dividing header">Sign Up</h4>
+          <div className ="field">
+            <label>Username</label>
+            <input placeholder="First Name" type="text" className="form-input"
+              placeholder="Your username"
+              name="username"
+              value={formState.name}
+              onChange={handleChange}></input>
+          </div>
+          <div className="field">
+            <label>E-mail</label>
+            <input type="email" placeholder="joe@schmoe.com"
+              name="email"
+              value={formState.email}
+              onChange={handleChange}></input>
+          </div>
+          <div className="field">
+            <label>Password</label>
+            <input
+              placeholder="******"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+            /></input>
+          </div>
+        </div >
+        <div className ="ui teal submit button">Submit</div>
+        </form >
+  )}
+
+{
+  error && (
+    <div className="my-3 p-3 bg-danger text-white">
+      {error.message}
+    </div>
+  )
+}
+</div > */}

@@ -41,7 +41,70 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <div className="ui center aligned basic segment">
+      {/* <div className="ui left icon action input"> */}
+      <div>
+        {data ? (
+          <p>
+            Success! You may now head{' '}
+            <Link to="/">back to the homepage.</Link>
+          </p>
+        ) : (
+          <form onSubmit={handleFormSubmit}>
+            <input
+              className="form-input"
+              placeholder="Your email"
+              name="email"
+              type="email"
+              value={formState.email}
+              onChange={handleChange}
+            />
+            <input
+              className="form-input"
+              placeholder="******"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+            <button
+              className="ui blue submit button"
+              style={{ cursor: 'pointer' }}
+              type="submit"
+            >
+              Login
+            </button>
+          </form>
+        )}
+
+        {error && (
+          <div className="my-3 p-3 bg-danger text-white">
+            {error.message}
+          </div>
+        )}
+      </div>
+      <div className="ui horizontal divider">
+        Or
+      </div>
+      <Link className="ui teal submit button" to="/signup">
+        Signup
+      </Link>
+    </div>
+
+
+
+
+
+
+
+
+
+  );
+};
+
+export default Login;
+
+{/* <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
@@ -87,8 +150,4 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </main>
-  );
-};
-
-export default Login;
+    </main> */}
