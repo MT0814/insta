@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import userimg from '../../images/millie.JPG'
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -19,14 +19,16 @@ const Header = () => {
         </div>
         <div>
           {Auth.loggedIn() ? (
-            <>
+            <div className='margin'>
               <Link className="text-main" to="/me" style={{ cursor: 'pointer' }}>
-                {Auth.getProfile().data.username}
+                <div className="content">
+                  <img className="ui avatar image" src={userimg} alt="user"></img>{Auth.getProfile().data.username}
+                </div>
               </Link>
               <p className="text-main" style={{ cursor: 'pointer' }} onClick={logout}>
                 Logout
               </p>
-            </>
+            </div>
           ) : (
             <>
               {/* <Link className="btn mainColor btn-lg btn-info m-2" to="/login">

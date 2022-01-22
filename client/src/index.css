@@ -152,7 +152,7 @@ optgroup,
 select,
 textarea {
   /* 1 */
-  font-size: 100%;
+  font-size: 1.1em;
   /* 1 */
   line-height: 1.15;
   /* 1 */
@@ -1179,7 +1179,7 @@ form .form-input {
   color: #1a1a1a;
   background-color: #ffffff;
   margin: 0.625rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border: 1px solid #484848;
   border-radius: 0.3rem;
 }
@@ -1363,6 +1363,7 @@ label form [type="radio"] {
 }
 
 /* col-sm */
+
 @media screen and (min-width: 640px) {
   .col-sm-auto {
     flex-grow: 1;
@@ -1551,6 +1552,12 @@ label form [type="radio"] {
     align-content: center;
   }
 }
+
+/* @media screen and (min-width: 716px) {
+  .form-input {
+    font-size: 1em;
+  }
+} */
 
 /* col-lg */
 @media screen and (min-width: 992px) {

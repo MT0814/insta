@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from '../Card'
+import Tile from '../Tile';
 
 const ThoughtList = ({
   thoughts,
@@ -19,7 +19,7 @@ const ThoughtList = ({
       {showTitle && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
-          <Card thought={thought} showUsername={showUsername} />
+          <Tile thought={thought} showUsername={showUsername} />
 
         ))}
     </div>

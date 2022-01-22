@@ -5,7 +5,7 @@ import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
-import Card from '../components/Card';
+import Tile from '../components/Tile';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
