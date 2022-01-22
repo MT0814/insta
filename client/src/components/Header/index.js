@@ -9,32 +9,32 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+    <header className="mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">Tech Thoughts</h1>
+          <Link className="text-main" to="/">
+            <h1 className="m-0 meet-font">Meet ME</h1>
           </Link>
-          <p className="m-0">Get into the mind of a programmer.</p>
+          <p className="m-0 text-light">Share the things you love as a Brand Ambassador</p>
         </div>
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
-                {Auth.getProfile().data.username}'s profile
+              <Link className="text-main" to="/me" style={{ cursor: 'pointer' }}>
+                {Auth.getProfile().data.username}
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <p className="text-main" style={{ cursor: 'pointer' }} onClick={logout}>
                 Logout
-              </button>
+              </p>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              {/* <Link className="btn mainColor btn-lg btn-info m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn subColor  btn-lg btn-light m-2" to="/signup">
                 Signup
-              </Link>
+              </Link> */}
             </>
           )}
         </div>

@@ -1,30 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import millie from '../../images/millie.JPG'
+
 function Card({ thought, showUsername }) {
     return (
         <div className="ui card" key={thought._id} >
             <div className="content">
-                <div className="right floated meta">
-                    {showUsername ? (
-                        <Link
-                            className="text-light"
-                            to={`/profiles/${thought.thoughtAuthor}`}
-                        >
-                            {thought.thoughtAuthor} <br />
-                            <span style={{ fontSize: '1rem' }}>
-                                had this thought on {thought.createdAt}
-                            </span>
-                        </Link>
-                    ) : (
-                        <>
-                            <span style={{ fontSize: '1rem' }}>
-                                You had this thought on {thought.createdAt}
-                            </span>
-                        </>
-                    )}
-                </div>
-                <img className="ui avatar image" src="/images/avatar/large/elliot.jpg"></img> Elliot
+                <img className="ui avatar image" src={millie}></img> Millie
             </div>
             <div className="image">
                 <img></img>
@@ -36,6 +19,25 @@ function Card({ thought, showUsername }) {
                 </span>
                 <i className="comment icon"></i>
                 3 comments
+            </div>
+            <div className="right floated meta">
+                {showUsername ? (
+                    <Link
+                        className="text-light"
+                        to={`/profiles/${thought.thoughtAuthor}`}
+                    >
+                        {thought.thoughtAuthor} <br />
+                        <span style={{ fontSize: '1rem' }}>
+                            had this thought on {thought.createdAt}
+                        </span>
+                    </Link>
+                ) : (
+                    <>
+                        <span style={{ fontSize: '1rem' }}>
+                            You had this thought on {thought.createdAt}
+                        </span>
+                    </>
+                )}
             </div>
             <div className="extra content">
                 <div className="ui large transparent left icon input">
