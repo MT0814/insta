@@ -23,7 +23,7 @@ function Tile({ thought, showUsername }) {
             </Card.Content>
             <Card.Content extra>
                 <a>
-                    <Icon name='user' />4 Likes
+                    <Icon name='like' />4 Likes
                 </a>
             </Card.Content>
         </Card >

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import loginImg from '../images/in2.webp'
-import { Form, Button, Divider, Input, Segment, Grid, Image } from 'semantic-ui-react'
+import { Form, Button, Input, Divider, Grid, Image } from 'semantic-ui-react'
 
 import Auth from '../utils/auth';
 
@@ -55,31 +55,33 @@ const Login = (props) => {
               <Link to="/">back to the homepage.</Link>
             </p>
           ) : (
-            <form onSubmit={handleFormSubmit}>
-              <input
-                className="form-input"
+            <Form onSubmit={handleFormSubmit}>
+              <Form.Input
+                // className="form-input"
+                icon='mail'
                 placeholder="mia@me.com"
                 name="email"
                 type="email"
                 value={formState.email}
                 onChange={handleChange}
               />
-              <input
-                className="form-input"
+              <Form.Input
+                // className="form-input"
+                icon='lock'
                 placeholder="******"
                 name="password"
                 type="password"
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button
+              <Button
                 className="ui mainColor submit button"
                 style={{ cursor: 'pointer' }}
                 type="submit"
               >
                 Login
-              </button>
-            </form>
+              </Button>
+            </Form>
           )}
 
           {error && (
