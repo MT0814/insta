@@ -2,23 +2,26 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import millie from '../../images/millie.JPG'
 import im2 from '../../images/im1.png'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Grid, Card, Icon, Image } from 'semantic-ui-react'
 
 function Tile({ thought, showUsername }) {
     return (
-        <Card key={thought._id}>
-            <Card.Content>
-                <Image className="ui avatar image" src={millie} wrapped ui={false} />User Name
-                {/* <Card.Header>Millie</Card.Header> */}
-            </Card.Content>
-            <Image src={im2} wrapped ui={false} />
-            {/* <Card.Content> */}
+        <Grid columns='equal'>
+            <Grid.Row columns={3}>
+                <Grid.Column>
+                    <Card key={thought._id}>
+                        <Card.Content>
+                            <Image className="ui avatar image" src={millie} wrapped ui={false} />User Name
+                            {/* <Card.Header>Millie</Card.Header> */}
+                        </Card.Content>
+                        <Image src={im2} wrapped ui={false} />
+                        {/* <Card.Content> */}
 
-            {/* <Card.Meta>
+                        {/* <Card.Meta>
                     <span className='date'>Joined in 2015</span>
                 </Card.Meta> */}
 
-            {/* <Card.Description>
+                        {/* <Card.Description>
                     {showUsername ? (
                         <Link
                             className="text-light"
@@ -37,22 +40,22 @@ function Tile({ thought, showUsername }) {
                         </>
                     )}
                 </Card.Description> */}
-            {/* </Card.Content> */}
+                        {/* </Card.Content> */}
 
-            <Card.Content extra>
-                <span className="right floated">
-                    <a>
-                        <Icon name='like' />4 Likes
-                    </a>
-                </span>
-                <a>
-                    <Link className="submit button" to="/commentform">
-                        <Icon name='comment' />4 Comments
-                    </Link>
+                        <Card.Content extra>
+                            <span className="right floated">
+                                <a>
+                                    <Icon name='like' />4 Likes
+                                </a>
+                            </span>
+                            <a>
+                                <Link className="submit button" to="/thoughts/:thoughtId">
+                                    <Icon name='comment' />4 Comments
+                                </Link>
 
-                </a>
-            </Card.Content>
-            {/* 
+                            </a>
+                        </Card.Content>
+                        {/* 
             <Card.Content extra>
 
                 <Input placeholder="Add Comment..." />
@@ -60,7 +63,12 @@ function Tile({ thought, showUsername }) {
             </Card.Content> */}
 
 
-        </Card >
+                    </Card >
+                </Grid.Column>
+
+
+            </Grid.Row>
+        </Grid >
 
 
         // <div class="ui grid">

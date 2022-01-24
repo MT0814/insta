@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import loginImg from '../images/in2.webp'
-import { Form, Button, Input, Divider, Grid, Image } from 'semantic-ui-react'
+import { Form, Button, Divider, Grid, Image } from 'semantic-ui-react'
 
 import Auth from '../utils/auth';
 
