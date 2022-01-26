@@ -7,12 +7,20 @@ const typeDefs = gql`
     email: String
     password: String
     thoughts: [Thought]!
+    photos: [Photo]!
   }
 
   type Thought {
     _id: ID
     thoughtText: String
     thoughtAuthor: String
+    createdAt: String
+    comments: [Comment]!
+  }
+
+  type Photo {
+    _id: ID
+    photoFile: String   
     createdAt: String
     comments: [Comment]!
   }
@@ -34,6 +42,8 @@ const typeDefs = gql`
     user(username: String!): User
     thoughts(username: String): [Thought]
     thought(thoughtId: ID!): Thought
+    photos(username: String): [Photo]
+    photo(photoId: ID!): Photo
     me: User
   }
 
