@@ -14,21 +14,21 @@ const Home = () => {
 
   return (
     <main>
-
+      {/* 
       <Grid >
-        <Grid.Row columns={3}>
-          {/* <div className="col-4 col-md-8 mb-3"> */}
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-            // title="Some Feed for Thought(s)..."
-            />
-          )}
-          {/* </div> */}
-        </Grid.Row>
-      </Grid >
+        <Grid.Row columns={3}> */}
+
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <ThoughtList
+          thoughts={thoughts}
+        // title="Some Feed for Thought(s)..."
+        />
+      )}
+
+      {/* </Grid.Row>
+      </Grid > */}
 
     </main>
   );

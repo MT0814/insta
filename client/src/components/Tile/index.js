@@ -2,103 +2,163 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import millie from '../../images/millie.JPG'
 import im2 from '../../images/im1.png'
-import { Grid, Card, Icon, Image } from 'semantic-ui-react'
+import lisa from '../../images/lisa.png'
+
+import { Card, Icon, Image, Button, Modal, Input, Comment, Form, Header } from 'semantic-ui-react'
+
 
 function Tile({ thought, showUsername }) {
+    const [open, setOpen] = React.useState(false)
     return (
-        <Grid columns='equal'>
-            <Grid.Row columns={3}>
-                <Grid.Column>
-                    <Card key={thought._id}>
-                        <Card.Content>
-                            <Image className="ui avatar image" src={millie} wrapped ui={false} />User Name
-                            {/* <Card.Header>Millie</Card.Header> */}
-                        </Card.Content>
-                        <Image src={im2} wrapped ui={false} />
-                        {/* <Card.Content> */}
 
-                        {/* <Card.Meta>
-                    <span className='date'>Joined in 2015</span>
-                </Card.Meta> */}
-
-                        {/* <Card.Description>
-                    {showUsername ? (
-                        <Link
-                            className="text-light"
-                            to={`/profiles/${thought.thoughtAuthor}`}
-                        >
-                            {thought.thoughtAuthor} <br />
-                            <span style={{ fontSize: '1rem' }}>
-                                had this thought on {thought.createdAt}
-                            </span>
-                        </Link>
-                    ) : (
-                        <>
-                            <span style={{ fontSize: '1rem' }}>
-                                You had this thought on {thought.createdAt}
-                            </span>
-                        </>
-                    )}
-                </Card.Description> */}
-                        {/* </Card.Content> */}
-
-                        <Card.Content extra>
-                            <span className="right floated">
-                                <a>
-                                    <Icon name='like' />4 Likes
-                                </a>
-                            </span>
-                            <a>
-                                <Link className="submit button" to="/thoughts/:thoughtId">
-                                    <Icon name='comment' />4 Comments
-                                </Link>
-
-                            </a>
-                        </Card.Content>
-                        {/* 
+        <Card key={thought._id}>
+            <Card.Content>
+                <Image className="ui avatar image" src={millie} wrapped ui={false} />User Name
+            </Card.Content>
+            <Image src={im2} wrapped ui={false} />
             <Card.Content extra>
+                <span className="right floated">
+                    <a>
+                        <Icon name='like' />100
+                    </a>
+                </span>
+                <Modal
+                    closeIcon
+                    open={open}
+                    onClose={() => setOpen(false)}
+                    onOpen={() => setOpen(true)}
+                    trigger={
+                        <a>
+                            {/* <Link className="submit button" > */}
+                            <Icon name='comment' style={{ cursor: 'pointer' }} />20
+                            {/* </Link> */}
+                        </a>}
 
-                <Input placeholder="Add Comment..." />
+                >
+                    <Modal.Header ><Image className="ui avatar image mr-3" src={millie} wrapped ui={false} />Lisa</Modal.Header>
+                    <Modal.Content image scrolling>
+                        <Image size='large' src={lisa} wrapped />
+                        <Modal.Description>
+                            <p>
+                                This is an example of expanded content that will cause the modal's
+                                dimmer to scroll.
+                            </p>
+                            <Comment.Group>
+                                <Header as='h3' dividing>
+                                    Comments
+                                </Header>
 
-            </Card.Content> */}
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/matt.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Matt</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>Today at 5:42PM</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>How artistic!</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
 
 
-                    </Card >
-                </Grid.Column>
+                            </Comment.Group>
 
 
-            </Grid.Row>
-        </Grid >
+                        </Modal.Description>
+                        {/* 
+                        <Modal.Content extra>
+                            <div className="ui large transparent left icon input">
+                                <Input icon='comments outline' iconPosition='left' placeholder='Add a comment...' />
+                            </div>
+                        </Modal.Content> */}
 
 
-        // <div class="ui grid">
-        //     <div class="three column row">
-        //         <div class="column">
-        //             <div className="ui card" key={thought._id} >
-        //                 <div className="content">
-        //                     <img className="ui avatar image" src={millie}></img>Millie
-        //                 </div>
-        //                 <div className="image">
-        //                     <img src={im2} alt="emily"></img>
-        //                 </div>
-        //                 <div className="content">
-        //                     <span className="right floated">
-        //                         <Icon name='like' />4 Likes
-        //                     </span>
-        //                     <i className="comment icon"></i>
-        //                     3 comments
-        //                 </div>
-        //                 <div className="extra content">
-        //                     <div className="ui large transparent left icon input">
-        //                         <i className="heart outline icon"></i>
-        //                         <input type="text" placeholder="Add Comment..."></input>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
+                    </Modal.Content>
+                    <Modal.Actions>
+                        <Form reply>
+                            <Form.TextArea />
+                            <Button content='Add Reply' labelPosition='left' icon='edit' primary />
+                        </Form>
+                        {/* <Button onClick={() => setOpen(false)} primary style={{ cursor: 'pointer' }}>
+                            Proceed <Icon name='chevron right' />
+                        </Button> */}
+                    </Modal.Actions>
+                </Modal>
 
-        //     </div>
-        // </div>
+            </Card.Content>
+
+
+
+        </Card >
+
+
     )
 }
 
@@ -123,3 +183,7 @@ export default Tile
                     </>
                 )}
             </div> */
+
+
+
+            // to="/thoughts/:thoughtId"

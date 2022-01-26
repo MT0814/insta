@@ -1114,6 +1114,10 @@ a:hover {
   background-color: #31a9e1;
 }
 
+.ui.comment {
+  font-family: "Poppins", sans-serif !important;
+}
+
 .card {
   border: 1px solid #1a1a1a;
   margin-bottom: 1rem;

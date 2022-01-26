@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import Tile from '../Tile';
-
+import { Grid } from 'semantic-ui-react'
 const ThoughtList = ({
   thoughts,
   title,
@@ -18,12 +18,18 @@ const ThoughtList = ({
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
-      {thoughts &&
-        thoughts.map((thought) => (
-          <Tile thought={thought} showUsername={showUsername} />
-
-        ))}
-    </div>
+      <Grid stackable columns={2} >
+        {thoughts &&
+          <Grid.Row>
+            {thoughts.map((thought) => (
+              <Grid.Column mobile={16} tablet={8} computer={4} className='mb-5'>
+                <Tile thought={thought} showUsername={showUsername} />
+              </Grid.Column>
+            ))}
+          </Grid.Row>
+        }
+      </Grid>
+    </div >
   );
 };
 

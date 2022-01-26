@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import userimg from '../../images/millie.JPG'
 import Auth from '../../utils/auth';
+import { Button, Icon } from 'semantic-ui-react'
 
 const Header = () => {
   const logout = (event) => {
@@ -17,14 +18,20 @@ const Header = () => {
           </Link>
           <p className="m-0 text-light">Share the things you love as a Brand Ambassador</p>
         </div>
+
         <div>
+
           {Auth.loggedIn() ? (
-            <div className='margin'>
+            <div className='display-flex'>
+              <div>
+                <Icon size='large' color='#ff889c' name='add circle' style={{ cursor: 'pointer' }}></Icon>
+              </div>
               <Link className="text-main" to="/me" style={{ cursor: 'pointer' }}>
                 <div className="content">
                   <img className="ui avatar image" src={userimg} alt="user"></img>{Auth.getProfile().data.username}
                 </div>
               </Link>
+
               <p className="text-main" style={{ cursor: 'pointer' }} onClick={logout}>
                 Logout
               </p>
