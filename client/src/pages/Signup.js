@@ -49,6 +49,7 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
+
               <Form onSubmit={handleFormSubmit}>
                 <Form.Input
                   icon='user'
@@ -88,6 +89,8 @@ const Signup = () => {
                   style={{ cursor: 'pointer' }}
                   type="submit" />
               </Form>
+
+
             )}
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
@@ -100,7 +103,7 @@ const Signup = () => {
 
       </Segment>
 
-    </div>
+    </div >
 
   );
 

@@ -15,10 +15,12 @@ const ThoughtList = ({
 
   }
 
+  // stackable columns={2}
+  // 
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
-      <Grid stackable columns={2} >
+      <Grid >
         {thoughts &&
           <Grid.Row>
             {thoughts.map((thought) => (

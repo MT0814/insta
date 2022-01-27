@@ -1006,14 +1006,14 @@ a:hover {
 
 .mainColor {
   background-color: #ff889c !important;
-  color: whitesmoke !important;
+  color: white !important;
   /* letter-spacing: 0.085em !important; */
   font-weight: 400 !important;
 }
 
 .mainColor:hover,
 .subColor:hover {
-  background-color: #ff738a !important;
+  background-color: #ff7088 !important;
 }
 .subColor {
   background-color: rgb(172, 172, 172) !important;
@@ -1116,6 +1116,28 @@ a:hover {
 
 .ui.comment {
   font-family: "Poppins", sans-serif !important;
+}
+
+.fontColor {
+  font-size: 1.1em;
+  color: rgb(85, 85, 85);
+}
+
+.cardIcon {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.061);
+}
+
+.cardIcon:hover {
+  color: #ff889c;
+}
+
+.ui.dimmer {
+  background-color: rgba(0, 0, 0, 0.561) !important;
+}
+
+.ui.grid {
+  margin-left: 1rem !important;
 }
 
 .card {

@@ -1,43 +1,39 @@
-import React, { useState, Component } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import millie from '../../images/millie.JPG'
 import im2 from '../../images/im1.png'
 import lisa from '../../images/lisa.png'
-import matt from '../../images/matt.jpeg'
-import justin from '../../images/justin.jpeg'
-import gal from '../../images/gal.jpeg'
-import joe from '../../images/joe.jpeg'
-import { Button, Dimmer, Header, Image, Icon, Modal, Comment, Form } from 'semantic-ui-react'
 
-export default class Tile extends Component {
+import { Card, Icon, Image, Button, Modal, Comment, Form, Header, Dimmer } from 'semantic-ui-react'
+import ThoughtList from '../ThoughtList';
 
 
-    state = {
-        active: false,
-        open: false
-    }
-
-    handleShow = () => this.setState({ active: true })
-    handleHide = () => this.setState({ active: false })
 
 
-    render() {
-        const { active, open } = this.state
-        const content = (
-            <div >
+function Tile({ thought, showUsername }) {
+    const [open, setOpen] = React.useState(false)
 
-                <a className='mr-3 cardIcon' >
-                    <Icon name='like' style={{ cursor: 'pointer' }}
-                    />100
 
-                </a>
+    return (
+
+        <Card key={thought._id}>
+
+            <Image src={im2} wrapped ui={false} />
+            <Card.Content extra>
+                <span className="right floated">
+                    <a>
+                        <Icon name='like'
+                        />100
+
+                    </a>
+                </span>
                 <Modal
                     closeIcon
                     open={open}
-                    onClose={() => this.setState({ open: false })}
-                    onOpen={() => this.setState({ open: true })}
+                    onClose={() => setOpen(false)}
+                    onOpen={() => setOpen(true)}
                     trigger={
-                        <a className='cardIcon'>
+                        <a>
 
                             <Icon name='comment' style={{ cursor: 'pointer' }} />20
 
@@ -58,7 +54,7 @@ export default class Tile extends Component {
                                 </Header>
 
                                 <Comment>
-                                    <Comment.Avatar src={matt} />
+                                    <Comment.Avatar src='/images/avatar/small/matt.jpg' />
                                     <Comment.Content>
                                         <Comment.Author as='a'>Matt</Comment.Author>
                                         <Comment.Metadata>
@@ -71,9 +67,9 @@ export default class Tile extends Component {
                                     </Comment.Content>
                                 </Comment>
                                 <Comment>
-                                    <Comment.Avatar src={joe} />
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
                                     <Comment.Content>
-                                        <Comment.Author as='a'>Joe</Comment.Author>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
                                         <Comment.Metadata>
                                             <div>5 days ago</div>
                                         </Comment.Metadata>
@@ -84,9 +80,9 @@ export default class Tile extends Component {
                                     </Comment.Content>
                                 </Comment>
                                 <Comment>
-                                    <Comment.Avatar src={justin} />
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
                                     <Comment.Content>
-                                        <Comment.Author as='a'>Justin</Comment.Author>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
                                         <Comment.Metadata>
                                             <div>5 days ago</div>
                                         </Comment.Metadata>
@@ -97,9 +93,9 @@ export default class Tile extends Component {
                                     </Comment.Content>
                                 </Comment>
                                 <Comment>
-                                    <Comment.Avatar src={gal} />
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
                                     <Comment.Content>
-                                        <Comment.Author as='a'>Gal</Comment.Author>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
                                         <Comment.Metadata>
                                             <div>5 days ago</div>
                                         </Comment.Metadata>
@@ -109,6 +105,33 @@ export default class Tile extends Component {
                                         </Comment.Actions>
                                     </Comment.Content>
                                 </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+                                <Comment>
+                                    <Comment.Avatar src='/images/avatar/small/joe.jpg' />
+                                    <Comment.Content>
+                                        <Comment.Author as='a'>Joe Henderson</Comment.Author>
+                                        <Comment.Metadata>
+                                            <div>5 days ago</div>
+                                        </Comment.Metadata>
+                                        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                                        <Comment.Actions>
+                                            <Comment.Action>Reply</Comment.Action>
+                                        </Comment.Actions>
+                                    </Comment.Content>
+                                </Comment>
+
 
                             </Comment.Group>
                         </Modal.Description>
@@ -117,24 +140,46 @@ export default class Tile extends Component {
                     <Modal.Actions>
                         <Form reply>
                             <Form.TextArea />
-                            <Button content='Add Reply' labelPosition='left' icon='edit' className='mainColor' />
+                            <Button content='Add Reply' labelPosition='left' icon='edit' primary />
                         </Form>
 
                     </Modal.Actions>
                 </Modal>
-            </div >
-        )
 
-        return (
-            <Dimmer.Dimmable
-                as={Image}
-                dimmed={active}
-                dimmer={{ active, content }}
-                onMouseEnter={this.handleShow}
-                onMouseLeave={this.handleHide}
-                size='large'
-                src={im2}
-            />
-        )
-    }
+            </Card.Content>
+
+
+
+        </Card >
+
+
+    )
 }
+
+
+
+export default Tile
+
+/* <div className="right floated meta">
+                {showUsername ? (
+                    <Link
+                        className="text-light"
+                        to={`/profiles/${thought.thoughtAuthor}`}
+                    >
+                        {thought.thoughtAuthor} <br />
+                        <span style={{ fontSize: '1rem' }}>
+                            had this thought on {thought.createdAt}
+                        </span>
+                    </Link>
+                ) : (
+                    <>
+                        <span style={{ fontSize: '1rem' }}>
+                            You had this thought on {thought.createdAt}
+                        </span>
+                    </>
+                )}
+            </div> */
+
+
+
+            // to="/thoughts/:thoughtId"

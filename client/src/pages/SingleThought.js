@@ -8,7 +8,7 @@ import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
-import { Button, Icon, Image, Modal } from 'semantic-ui-react'
+// import { Button, Icon, Image, Modal } from 'semantic-ui-react'
 
 
 
@@ -16,7 +16,7 @@ import { Button, Icon, Image, Modal } from 'semantic-ui-react'
 const SingleThought = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { thoughtId } = useParams();
-  const [open, setOpen] = React.useState(false)
+  // const [open, setOpen] = React.useState(false)
 
   const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
     // pass URL parameter

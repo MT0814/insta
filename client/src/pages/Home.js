@@ -5,7 +5,7 @@ import ThoughtList from '../components/ThoughtList';
 // import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
-import { Grid } from 'semantic-ui-react'
+// import { Grid } from 'semantic-ui-react'
 // import Tile from '../components/Tile';
 
 const Home = () => {
