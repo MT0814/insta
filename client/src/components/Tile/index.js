@@ -9,6 +9,8 @@ import gal from '../../images/gal.jpeg'
 import joe from '../../images/joe.jpeg'
 import { Grid, Button, Dimmer, Header, Image, Icon, Modal, Comment, Form } from 'semantic-ui-react'
 
+
+
 export default class Tile extends Component {
 
 
@@ -38,9 +40,7 @@ export default class Tile extends Component {
                     onOpen={() => this.setState({ open: true })}
                     trigger={
                         <a className='cardIcon'>
-
                             <Icon name='comment' style={{ cursor: 'pointer' }} />20
-
                         </a>}
 
                 >

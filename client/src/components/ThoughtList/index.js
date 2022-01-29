@@ -15,8 +15,6 @@ const ThoughtList = ({
 
   }
 
-  // stackable columns={2}
-  // 
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
