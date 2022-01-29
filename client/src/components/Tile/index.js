@@ -7,7 +7,7 @@ import matt from '../../images/matt.jpeg'
 import justin from '../../images/justin.jpeg'
 import gal from '../../images/gal.jpeg'
 import joe from '../../images/joe.jpeg'
-import { Button, Dimmer, Header, Image, Icon, Modal, Comment, Form } from 'semantic-ui-react'
+import { Grid, Button, Dimmer, Header, Image, Icon, Modal, Comment, Form } from 'semantic-ui-react'
 
 export default class Tile extends Component {
 
@@ -44,7 +44,8 @@ export default class Tile extends Component {
                         </a>}
 
                 >
-                    <Modal.Header ><Image className="ui avatar image mr-3" src={millie} wrapped ui={false} />Lisa</Modal.Header>
+                    <Modal.Header className='username mt-3'><Image className="ui avatar image mr-3" src={millie} wrapped ui={false} fluid />Lisa <span className='user-space mr-3'>Follow</span></Modal.Header>
+
                     <Modal.Content image scrolling>
                         <Image size='large' src={lisa} wrapped />
                         <Modal.Description>

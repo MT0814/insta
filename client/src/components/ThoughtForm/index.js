@@ -115,12 +115,12 @@ const ThoughtForm = () => {
                 // ref={this.fileInputRef}
                 type="file"
                 hidden
-
+                className='mainColor'
               // onChange={this.fileChange}
               />
               <textarea
                 name="thoughtText"
-                placeholder="Write a caption..."
+                placeholder="Here's a new thought..."
                 value={thoughtText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
