@@ -50,5 +50,8 @@ MIT
 Contributions to this project are welcomed.
 
 ## Questions
-For all your questions, you can contact Honorinenn (Honorine Ndom Ndzah), MT0814 (Millie Tsai), and KS1 (Kartiki Saraf)
+For all your questions, you can contact:
+Honorinenn (Honorine Ndom Ndzah),
+MT0814 (Millie Tsai), 
+and KS1 (Kartiki Saraf)
 
