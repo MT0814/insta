@@ -5,9 +5,6 @@
 Impress ME is an influencer platform which focuses on the sharing of products by various organizations or individuals from all categories and domains of works. 
 In this app users can share an existing product or a new product and have followers comment and follow their post.
 
-<img width="940" alt="IMME" src="https://user-images.githubusercontent.com/87605893/151648711-46a28a5c-2607-4181-a7de-e362e9d9422c.png">
-
-
 ![login-screen](https://user-images.githubusercontent.com/3493839/151684316-9d510c16-ffdd-4a24-b697-619be927caa9.png)
 
      
