@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import ThoughtList from '../components/ThoughtList';
-import PhotoList from '../components/PhotoList';
+// import PhotoList from '../components/PhotoList';
 // import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
@@ -13,8 +13,8 @@ import { QUERY_PHOTOS } from '../utils/queries';
 const Home = () => {
   // const { loading, data } = useQuery(QUERY_THOUGHTS);
   // const thoughts = data?.thoughts || [];
-  const { loading, data } = useQuery(QUERY_PHOTOS);
-  const photos = data?.photos || [];
+  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const thoughts = data?.thoughts || [];
 
 
   return (
@@ -26,10 +26,8 @@ const Home = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        // <ThoughtList
-        //   thoughts={thoughts}
-        <PhotoList
-        photos={photos}
+        <ThoughtList
+          thoughts={thoughts}
         // title="Some Feed for Thought(s)..."
         />
       )}
