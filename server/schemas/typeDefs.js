@@ -32,6 +32,14 @@ const typeDefs = gql`
     createdAt: String
   }
 
+  type Like {
+    _id: ID   
+  }
+
+  type Follower {
+    _id: ID   
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -51,8 +59,13 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addThought(thoughtText: String!): Thought
-    addComment(thoughtId: ID!, commentText: String!): Thought
+    addPhoto(photoFile: String!): Photo
+    addComment(photoId: ID!, commentText: String!): Photo
+    addLike(photoId: ID!): Photo
+    addFollower(photoId: ID!): Photo   
     removeThought(thoughtId: ID!): Thought
+    removePhoto(photoId: ID!): Photo
+    removeLike(photoId: ID!): Photo
     removeComment(thoughtId: ID!, commentId: ID!): Thought
   }
 `;

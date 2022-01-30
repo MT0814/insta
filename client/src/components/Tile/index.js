@@ -7,13 +7,17 @@ import matt from '../../images/matt.jpeg'
 import justin from '../../images/justin.jpeg'
 import gal from '../../images/gal.jpeg'
 import joe from '../../images/joe.jpeg'
+import { QUERY_PHOTOS, QUERY_ME } from '../../utils/queries';
+import { ADD_PHOTO } from '../../utils/mutations';
+import Auth from '../../utils/auth';
+import photolist from '../PhotoList';
+
 import { Grid, Button, Dimmer, Header, Image, Icon, Modal, Comment, Form } from 'semantic-ui-react'
 
 
 
 export default class Tile extends Component {
-
-
+  
     state = {
         active: false,
         open: false
@@ -134,7 +138,7 @@ export default class Tile extends Component {
                 onMouseEnter={this.handleShow}
                 onMouseLeave={this.handleHide}
                 size='large'
-                src={im2}
+                src={photolist.photos}
             />
         )
     }

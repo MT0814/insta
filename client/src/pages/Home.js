@@ -2,15 +2,20 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import ThoughtList from '../components/ThoughtList';
+import PhotoList from '../components/PhotoList';
 // import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_PHOTOS } from '../utils/queries';
 // import { Grid } from 'semantic-ui-react'
 // import Tile from '../components/Tile';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
+  // const { loading, data } = useQuery(QUERY_THOUGHTS);
+  // const thoughts = data?.thoughts || [];
+  const { loading, data } = useQuery(QUERY_PHOTOS);
+  const photos = data?.photos || [];
+
 
   return (
     <main>
@@ -21,8 +26,10 @@ const Home = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <ThoughtList
-          thoughts={thoughts}
+        // <ThoughtList
+        //   thoughts={thoughts}
+        <PhotoList
+        photos={photos}
         // title="Some Feed for Thought(s)..."
         />
       )}
