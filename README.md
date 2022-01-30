@@ -41,7 +41,7 @@ For users to post pictures of their prodcuts to the Impress ME website, they hav
 
 
 ## License
-MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributing
 Contributions to this project are welcomed.
