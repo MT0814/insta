@@ -19,7 +19,7 @@ In this app users can share an existing product or a new product and have follow
 
 
 ## Installation
-The following dependencies are neede and must be installed for this application to run effectively:
+The following dependencies are needed and must be installed for this application to run effectively:
 Apollo-server-express
 bcrypt
 express
