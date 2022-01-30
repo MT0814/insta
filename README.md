@@ -50,5 +50,5 @@ Contributions to this project are welcomed.
 For all your questions, you can contact:
 Honorinenn (Honorine Ndom Ndzah),
 MT0814 (Millie Tsai), 
-and KS1 (Kartiki Saraf)
+and KS1.
 
