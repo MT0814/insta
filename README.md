@@ -34,15 +34,20 @@ mongoose
 For users to post pictures of their prodcuts to the Impress ME website, they have to signup or login and upload a post. Users can also follow other users, like and comment on their post.
 
 ## Technologies
-#React
-#GraphQL
-#Node.js
-#Express
-#MongoDB/Mongoose
-#Semantic UI
+1. React for the front end
+2. Semantic UI
+3. GraphQL with a node.js and Express.js server
+4. MongoDB and Mongoose ODM for the database
+5. Queries and mutations for retrieving, adding, updating and deleting data
+6. JWT Authentication
+7. AWS S3 Platform to store images
+
 
 ## License
 MIT
+
+## Contributing
+Contributions to this project are welcomed.
 
 ## Questions
 For all your questions, you can contact Honorinenn (Honorine Ndom Ndzah), MT0814 (Millie Tsai), and KS1 (Kartiki Saraf)
