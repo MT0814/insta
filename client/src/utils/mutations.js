@@ -39,12 +39,34 @@ export const ADD_THOUGHT = gql`
   }
 `;
 
-export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+export const ADD_PHOTO = gql`
+  mutation addPhoto($photoFile: String!){
+    addPhoto(photoFile: $photoFile) {
       _id
-      thoughtText
-      thoughtAuthor
+      photoFile
+      photoAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+      }
+      likes {
+        _id
+      }
+      followers {
+        follower_id
+        following_id
+      }
+    }
+  }
+`;
+
+export const ADD_COMMENT = gql`
+  mutation addComment($photoId: ID!, $commentText: String!) {
+    addComment(photoId: $photoId, commentText: $commentText) {
+      _id
+      photoFile
+      photoAuthor
       createdAt
       comments {
         _id
@@ -54,3 +76,4 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
