@@ -53,7 +53,7 @@ For users to post pictures of their prodcuts to the Impress ME website, they hav
 
 
 ## Contributing
-Contributions to this project are welcomed.
+Contributions to this project are welcome.
 
 ## Questions
 For all your questions, you can contact:
