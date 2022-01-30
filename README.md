@@ -14,7 +14,7 @@ In this app users can share an existing product or a new product and have follow
 ## Table of Contents:
 1. [Installation](#installation)
 2. [Usage](#usage)
-3. [Technologies] (#technologies)
+3. [Technologies](#technologies)
 4. [License](#license)
 5. [Contributing](#contributing)
 6. [Tests](#tests)
@@ -34,10 +34,16 @@ mongoose
 For users to post pictures of their prodcuts to the Impress ME website, they have to signup or login and upload a post. Users can also follow other users, like and comment on their post.
 
 ## Technologies
--React
--GraphQL
--Node.js
--Express
--MongoDB/Mongoose
--Semantic UI
+#React
+#GraphQL
+#Node.js
+#Express
+#MongoDB/Mongoose
+#Semantic UI
+
+## License
+MIT
+
+## Questions
+For all your questions, you can contact Honorinenn (Honorine Ndom Ndzah), MT0814 (Millie Tsai), and KS1 (Kartiki Saraf)
 
